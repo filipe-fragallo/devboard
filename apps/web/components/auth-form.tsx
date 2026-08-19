@@ -51,9 +51,13 @@ export function AuthForm({ mode }: { mode: 'login' | 'register' }) {
       let payload;
 
       if (mode === 'register') {
-        const { confirmPassword, ...registerPayload } = values as RegisterForm;
+        const registerValues = values as RegisterForm;
 
-        payload = registerPayload;
+        payload = {
+          name: registerValues.name,
+          email: registerValues.email,
+          password: registerValues.password,
+        };
       } else {
         payload = values;
       }
