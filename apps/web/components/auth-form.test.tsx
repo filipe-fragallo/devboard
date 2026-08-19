@@ -16,6 +16,6 @@ describe('AuthForm', () => {
       </QueryClientProvider>,
     );
     await userEvent.click(screen.getByRole('button', { name: /entrar/i }));
-    expect(await screen.findByText(/invalid email/i)).toBeInTheDocument();
+    expect(await screen.findByText(/email inválido/i)).toBeInTheDocument();
   });
 });
