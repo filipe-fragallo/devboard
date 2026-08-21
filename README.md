@@ -4,11 +4,15 @@ DevBoard is a full stack Kanban project management application built to demonstr
 
 ## Screenshots
 
-Screenshots should be added after running the application locally or deploying it. No placeholder images are committed.
+![alt text](image.png)
 
 ## Live Demo
 
-Prepared for deployment. Add the Vercel and API URLs here after deploy.
+- 🌐 Frontend: https://devboard-web-gamma.vercel.app
+- ⚙️ API: https://devboard-api-55ko-iota.vercel.app
+- 📚 Swagger: https://devboard-api-55ko-iota.vercel.app/docs
+- 📄 OpenAPI JSON: https://devboard-api-55ko-iota.vercel.app/docs-json
+- ❤️ Health: https://devboard-api-55ko-iota.vercel.app/health
 
 ## Features
 
@@ -118,17 +122,45 @@ GitHub Actions runs install, Prisma Client generation, lint, typecheck, tests an
 
 ## API Documentation
 
-Run the API and open `http://localhost:3001/docs` for Swagger/OpenAPI documentation.
+Swagger/OpenAPI documentation is available both locally and in production.
+
+### Production
+
+- Swagger UI: https://devboard-api-55ko-iota.vercel.app/docs
+- OpenAPI JSON: https://devboard-api-55ko-iota.vercel.app/docs-json
+
+### Local
+
+- Swagger UI: http://localhost:3001/docs
+- OpenAPI JSON: http://localhost:3001/docs-json
+
+The Swagger interface includes authentication, boards, columns, tasks and health endpoints, with JWT Bearer authentication support.
 
 ## Deployment
 
-Frontend deployment target: Vercel, project root `apps/web`.
+DevBoard is deployed using Vercel and Neon.
 
-Backend deployment target: Railway or Render using `apps/api/Dockerfile`.
+### Frontend
 
-Database target: managed PostgreSQL such as Neon.
+- Platform: Vercel
+- Root directory: `apps/web`
+- URL: https://devboard-web-gamma.vercel.app
 
-Deployment variables must be configured in the host dashboards. No deploy was executed because external credentials are required.
+### Backend
+
+- Platform: Vercel
+- Root directory: `apps/api`
+- URL: https://devboard-api-55ko-iota.vercel.app
+- Swagger: https://devboard-api-55ko-iota.vercel.app/docs
+
+### Database
+
+- Platform: Neon
+- Database: PostgreSQL
+
+Production environment variables are configured directly in Vercel and are not committed to the repository.
+
+Deployments are connected to the GitHub repository and production deployments are triggered automatically from the `main` branch.
 
 ## Engineering Decisions
 
